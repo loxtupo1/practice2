@@ -1,0 +1,37 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAdmin() {
+      return request.auth != null &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    function isValidImage() {
+      return request.resource.contentType.matches('image/.*')
+             && request.resource.size < 5 * 1024 * 1024; // 5MB max
+    }
+
+    // Аватары пользователей - пользователи могут загружать свои аватары
+    match /avatars/{userId}/{allPaths=**} {
+      allow write: if isOwner(userId) && isValidImage();
+      allow read: if true; // Все могут видеть аватары
+    }
+
+    // Изображения турниров - только админ может загружать
+    match /tournaments/{tournamentId}/{allPaths=**} {
+      allow write: if isAdmin() && isValidImage();
+      allow read: if true;
+    }
+
+    // Запрет по умолчанию для всех остальных файлов
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

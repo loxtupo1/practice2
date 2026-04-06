@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      // Пользователь может читать и обновлять свой профиль
+      // Админ может делать все
+      allow read, write: if isOwner(userId) || isAdmin();
+    }
+
+    match /tournaments/{tournamentId} {
+      allow read: if true;
+      allow update: if request.auth != null;
+      allow create, delete: if isAdmin();
+    }
+
+    match /registrations/{regId} {
+      allow read: if (request.auth != null && resource.data.userId == request.auth.uid) || isAdmin();
+      allow create: if request.auth != null;
+      allow update, delete: if isAdmin();
+    }
+
+    // Добавляем коллекцию для отзывов (опционально)
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+  }
+}
