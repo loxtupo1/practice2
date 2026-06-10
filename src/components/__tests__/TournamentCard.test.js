@@ -73,7 +73,7 @@ describe('TournamentCard', () => {
 
     expect(wrapper.text()).toContain('CS2');
     expect(wrapper.text()).toContain('Spring Cup');
-    expect(wrapper.text()).toMatch(/\$5\s*000/);
+    expect(wrapper.text()).toMatch(/\$5[\s,]*000/);
     expect(wrapper.find('a[href="/tournament/tournament-1"]').exists()).toBe(true);
   });
 
