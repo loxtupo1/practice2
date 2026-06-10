@@ -331,7 +331,7 @@ onUnmounted(() => {
   text-align: center;
   padding: 4rem 2rem;
   font-size: 1.1rem;
-  color: #808080;
+  color: #c7d0d9;
 }
 
 .error-state h2 {
@@ -354,7 +354,7 @@ onUnmounted(() => {
 }
 
 .breadcrumb {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -378,7 +378,7 @@ onUnmounted(() => {
 }
 
 .detail-subtitle {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 1.1rem;
 }
 
@@ -409,7 +409,7 @@ onUnmounted(() => {
 }
 
 .label {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
@@ -546,7 +546,7 @@ onUnmounted(() => {
 }
 
 .info-body h4 {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
@@ -600,7 +600,7 @@ onUnmounted(() => {
 }
 
 .info-item .key {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.85rem;
 }
 
@@ -621,7 +621,7 @@ onUnmounted(() => {
 }
 
 .rating-text {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.9rem;
 }
 
@@ -648,7 +648,7 @@ onUnmounted(() => {
 }
 
 .organizer-info p {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.85rem;
 }
 

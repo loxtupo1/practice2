@@ -9,7 +9,7 @@
     </router-link>
     
     <div class="tournament-meta">
-      <span>💰 ${{ tournament.prizePool?.toLocaleString() || 0 }}</span>
+      <span>${{ tournament.prizePool?.toLocaleString() || 0 }}</span>
       <span v-if="tournament.status !== 'completed'" :class="{ 'text-full': isFull(tournament) }">
         Команды: {{ tournament.registeredTeams || 0 }}/{{ tournament.maxTeams || 0 }}
       </span>
@@ -181,7 +181,7 @@ const formatDate = (date) => {
 .tournament-meta { 
   display: flex; 
   gap: 1rem; 
-  color: #808080; 
+  color: #c7d0d9; 
   margin-bottom: 1rem; 
   font-size: 0.9rem;
 }
@@ -226,7 +226,7 @@ const formatDate = (date) => {
 }
 
 .winner-label {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.9rem;
 }
 
@@ -258,7 +258,7 @@ const formatDate = (date) => {
 
 .btn-register:disabled { 
   background: #333; 
-  color: #666; 
+  color: #aeb8c2; 
   cursor: not-allowed; 
 }
 

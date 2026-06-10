@@ -172,7 +172,7 @@ const handleRegister = async () => {
 }
 
 .auth-subtitle {
-  color: #808080;
+  color: #c7d0d9;
   text-align: center;
   margin-bottom: 2rem;
   font-size: 0.9rem;
@@ -205,7 +205,7 @@ const handleRegister = async () => {
 }
 
 .form-group input::placeholder {
-  color: #4a4e52;
+  color: #a8b2bc;
 }
 
 .error-message {
@@ -245,7 +245,7 @@ const handleRegister = async () => {
 
 .auth-footer {
   text-align: center;
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.9rem;
 }
 

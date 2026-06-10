@@ -13,7 +13,7 @@
         <template v-if="isAuthenticated">
           <router-link to="/profile" class="nav-link" active-class="active">Профиль</router-link>
           <router-link v-if="isAdmin" to="/admin" class="nav-link admin-link" active-class="active">
-            Админпанель
+            Админ-панель
           </router-link>
           <div class="user-info">
             <span class="user-email">Привет, {{ userName }}</span>
@@ -105,9 +105,15 @@ const handleLogout = async () => {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   background-color: #0a0c0f;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #edf4fb;
+  line-height: 1.55;
 }
 
 .app-container {
@@ -147,7 +153,9 @@ body {
 .nav-link {
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #808080;
+  color: #d7e2ec;
+  font-size: 1.05rem;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
@@ -185,7 +193,8 @@ body {
 
 .user-email {
   color: #00ffff;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .logout-btn {
@@ -193,6 +202,8 @@ body {
   background: transparent;
   border: 1px solid #ff4444;
   color: #ff4444;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 4px;
@@ -213,11 +224,16 @@ body {
   background: #0f1215;
   padding: 1.5rem;
   text-align: center;
-  color: #808080;
+  color: #d7e2ec;
+  font-size: 1.05rem;
   border-top: 1px solid #2a2e32;
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+
   .navbar {
     padding: 1rem;
     flex-wrap: wrap;
@@ -258,6 +274,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
   .navbar {
     padding: 0.5rem;
   }
@@ -272,7 +292,7 @@ body {
 
   .nav-link {
     padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .user-info {
@@ -281,7 +301,7 @@ body {
 
   .logout-btn {
     padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 </style>

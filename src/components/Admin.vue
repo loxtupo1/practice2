@@ -365,9 +365,9 @@ const getStatusText = (status) => {
 .admin-container { max-width: 1400px; margin: 0 auto; padding: 2rem; background: #0a0c0f; color: #e0e0e0; }
 .admin-header { text-align: center; margin-bottom: 3rem; }
 .admin-header h1 { color: #00ffff; font-size: 2.5rem; font-weight: 900; letter-spacing: 0.1rem; margin-bottom: 0.5rem; }
-.admin-subtitle { color: #808080; font-size: 1rem; letter-spacing: 0.1rem; }
+.admin-subtitle { color: #c7d0d9; font-size: 1rem; letter-spacing: 0.1rem; }
 .admin-tabs { display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid #2a2e32; padding-bottom: 1rem; }
-.tab-btn { padding: 0.8rem 1.5rem; background: transparent; border: 2px solid #2a2e32; color: #808080; font-weight: 600; letter-spacing: 0.1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; }
+.tab-btn { padding: 0.8rem 1.5rem; background: transparent; border: 2px solid #2a2e32; color: #c7d0d9; font-weight: 600; letter-spacing: 0.1rem; cursor: pointer; transition: all 0.3s ease; border-radius: 4px; }
 .tab-btn:hover { color: #00ffff; border-color: #00ffff; }
 .tab-btn.active { background: #00ffff; color: #0a0c0f; border-color: #00ffff; }
 .tab-content { background: #14181c; border: 1px solid #2a2e32; padding: 2rem; border-radius: 4px; animation: fadeIn 0.3s ease; }
@@ -394,7 +394,7 @@ const getStatusText = (status) => {
 .btn-edit, .btn-delete { padding: 0.5rem 1rem; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 0.85rem; }
 .btn-edit { background: #0088ff; color: white; }
 .btn-delete { background: #ff4444; color: white; }
-.empty-state { text-align: center; padding: 3rem; color: #808080; }
+.empty-state { text-align: center; padding: 3rem; color: #c7d0d9; }
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
 .stat-card { background: #0f1215; border: 1px solid #2a2e32; padding: 2rem; border-radius: 4px; text-align: center; }
 .stat-card h3 { color: #b0b0b0; font-size: 0.95rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1rem; }
@@ -414,7 +414,7 @@ const getStatusText = (status) => {
   font-size: 1rem;
 }
 .user-cell { display: flex; flex-direction: column; }
-.user-cell small { color: #666; font-size: 0.75rem; }
+.user-cell small { color: #aeb8c2; font-size: 0.75rem; }
 
 @media (max-width: 768px) {
   .admin-container { padding: 1rem; }

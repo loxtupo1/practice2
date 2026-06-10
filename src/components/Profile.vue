@@ -139,11 +139,11 @@ watch(() => props.userId, (newId) => {
 }
 
 .details h1 { margin: 0; font-size: 2rem; }
-.user-email { color: #808080; margin-top: 0.5rem; }
+.user-email { color: #c7d0d9; margin-top: 0.5rem; }
 
 .name-display { display: flex; align-items: center; gap: 1rem; }
 .btn-edit-inline { 
-  background: none; border: 1px solid #333; color: #808080; 
+  background: none; border: 1px solid #333; color: #c7d0d9; 
   padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;
 }
 .btn-edit-inline:hover { border-color: #00ffff; color: #00ffff; }
@@ -165,7 +165,7 @@ watch(() => props.userId, (newId) => {
   background: #14181c; padding: 1.5rem; border-radius: 8px; 
   border-left: 4px solid #00ffff; display: flex; justify-content: space-between; align-items: center; 
 }
-.game-tag { color: #808080; font-size: 0.9rem; }
+.game-tag { color: #c7d0d9; font-size: 0.9rem; }
 .reg-status.pending { color: #ffa500; }
 .btn-link { color: #00ffff; text-decoration: none; }
 

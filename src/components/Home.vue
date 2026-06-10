@@ -134,7 +134,7 @@
     <div class="prize-section">
       <div class="prize-content">
         <h2>СЕЗОН 2026</h2>
-        <div class="prize-amount">$500,000</div>
+        <div class="prize-amount">$1,000,000</div>
         <p>Общий призовой фонд сезона</p>
         <router-link v-if="!isAuthenticated" to="/register" class="btn btn-primary btn-large">ПРИНЯТЬ УЧАСТИЕ</router-link>
         <router-link v-else to="/profile" class="btn btn-primary btn-large">МОЙ ПРОФИЛЬ</router-link>
@@ -376,7 +376,7 @@ onUnmounted(() => {
 .loading {
   text-align: center;
   padding: 3rem;
-  color: #808080;
+  color: #c7d0d9;
   font-size: 1.2rem;
 }
 
@@ -421,7 +421,7 @@ onUnmounted(() => {
 }
 
 .feature-card p {
-  color: #808080;
+  color: #c7d0d9;
   line-height: 1.6;
 }
 
@@ -434,7 +434,7 @@ onUnmounted(() => {
 }
 
 .prize-content h2 {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
   margin-bottom: 1rem;
@@ -573,7 +573,7 @@ onUnmounted(() => {
 }
 
 .game-tag {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.9rem;
   background: #2a2e32;
   padding: 0.2rem 0.8rem;
@@ -593,7 +593,7 @@ onUnmounted(() => {
 }
 
 .prize-label, .winner-label {
-  color: #808080;
+  color: #c7d0d9;
   font-size: 0.9rem;
 }
 
